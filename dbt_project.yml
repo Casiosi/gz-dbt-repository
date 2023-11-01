@@ -2,9 +2,7 @@ name: "gz_dbt_repository"
 version: "1.0.0"
 config-version: 2
 models:
-  gz_dbt_repository_dbt:
     mart:
       +materialized: table
       finance:
         schema:finance
-        
