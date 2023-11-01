@@ -9,13 +9,13 @@ source as (
 renamed as (
 
     select
-        date_date,
+        CAST(date_date AS DATE),
         paid_source,
         campaign_key,
         campgn_name AS campaign_name,
         CAST(ads_cost AS FLOAT64),
-        impression,
-        click
+        CAST(impression AS FLOAT64),
+        CAST(click AS FLOAT64)
 
     from source
 
