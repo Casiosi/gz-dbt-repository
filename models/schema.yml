@@ -57,7 +57,6 @@ sources:
           - unique:
               column_name: "(date_date || '-' || campaign_key)"       
 
-              
 models:
   - name: stg_raw_product
   - name: stg_raw_sales
@@ -93,3 +92,11 @@ models:
     description: finance calculation per days
   - name: int_campaigns_day
     description: campaign calculation per days
+  - name: finance_campaigns_day
+    description: Join int_campaigns_day with finance_days to add ads_margin
+    columns:
+      - name: date_date
+        description: PK test
+        tests:
+          - unique
+          - not_null
